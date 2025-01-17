@@ -5,11 +5,13 @@ class Product {
   final String? description;
   final String? category;
   final String? image;
+  final int? quantity; // New field for quantity
   final Rating? rating;
 
   Product({
     this.id,
     this.title,
+    this.quantity = 1,
     this.price,
     this.description,
     this.category,
@@ -25,6 +27,7 @@ class Product {
       description: json['description'],
       category: json['category'],
       image: json['image'],
+      quantity: json['quantity'] as int? ?? 1,
       rating: json['rating'] != null ? Rating.fromJson(json['rating']) : null,
     );
   }
@@ -37,6 +40,8 @@ class Product {
       'description': description,
       'category': category,
       'image': image,
+      'quantity': quantity, // Default quantity is 1
+
       'rating': rating?.toJson(),
     };
   }

@@ -143,13 +143,13 @@ class CustomTextField extends StatelessWidget {
             ), // Padding inside the text field
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(5),
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: Colors.transparent,
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(5),
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: Colors.transparent,
           ),
         ),
